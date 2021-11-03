@@ -131,10 +131,10 @@ Use the getFlavorByIndex function below to do the following:
 // two pararms - array and number (holding place for an index)
 //return the array at the index
 // array[0]
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, num){
+  return array[num];
 }
-
+getFlavorByIndex(originalFlavors, 2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -154,10 +154,15 @@ Use the removeFlavorByName function below to do the following:
 // loop thorugh the array and check every index for the exact match of the string, if it exists then remove using splice
 //outside of the loop, return the array
 //exact match so use === not includes
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, string){
+  for (let i = 0; i < array.length; i++){
+    if(array[i] === string){
+      array.splice(i, 1);
+    }
+  }
+  return array;
 }
-
+console.log(originalFlavors, 'Rocky Road');
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
