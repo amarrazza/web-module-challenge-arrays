@@ -45,10 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 // take 1 parameter, holding the place for the array you will pass in as your argument
-function copy(/*your code here*/){
-  //take a spread of the parameter
-  /*your code here*/
-}    
+function copy(array){
+  const newArray = [...array];
+  return newArray;
+}
+copy(originalFlavors);
 
 
 
@@ -67,9 +68,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 //taking 1 parameter
 //checking if there are 31 flavors, returns true or false
 //conditional inside of here, if its true return true
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+ if(array.length === 31){
+   return true;
+ }
 }
+is31Flavors(originalFlavors);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -86,9 +90,11 @@ Use the addFlavor function below to do the following:
 //2 params - array, string (holding place for new flavour)
 //add to the front using unshift
 // return the array
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+ array.unshift(string);
+ return array;
 }
+addFlavor(originalFlavors, 'Rainbow Sherbert');
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -103,9 +109,12 @@ Use the removeLastFlavor function below to do the following:
 */
 // 1 parameter which will be a place holder for the array
 //use pop to remove the last item
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+ array.pop();
+ return array;
 }
+
+removeLastFlavor(originalFlavors);
 
 
 
@@ -198,7 +207,15 @@ Use the getAverageWordLength function below to do the following:
 
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
+// create a varaible to store the number of words set it to 0
+//write a for loop that loops thru array
+//create variable called string and se it equal to each item array[i]
+//inside your for loop create a while loop the condition is going to be string.includes(' ')
+//create a varaible called space set that to string.indexOf(' ')
+//update our string variable using slice(space +1)
+//outside our while loop but still inside of our for loop we are going to update the number of words
 
+//outside of the for loop you are going to return numOfWords array.length
 function getAverageWordLength(/*code here*/){
   /*code here*/
 }
